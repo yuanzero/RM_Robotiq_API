@@ -1,36 +1,19 @@
-# RM_robotiq_API
+Robotic Arm Gripper Controller
+-----------------------------
 
-#### Description
-Robotiq gripper connect the Realman robot arm
+1. Initialization:
+   - Creates connection to robotic arm at IP "192.168.1.18" on port 8080
+   - Sets up communication parameters (Modbus mode, baud rate 115200)
 
-#### Software Architecture
-Software architecture description
-
-#### Installation
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Instructions
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### Contribution
-
-1.  Fork the repository
-2.  Create Feat_xxx branch
-3.  Commit your code
-4.  Create Pull Request
+2. Main Functions:
+   - activate(): Wakes up the gripper (sends initialization commands)
+   - goToPosition(): Moves gripper to target position and waits until it arrives
+   - getPosition(): Reads current gripper position (0-255 range)
+   - stop(): Stops gripper movement
 
 
-#### Gitee Feature
-
-1.  You can use Readme\_XXX.md to support different languages, such as Readme\_en.md, Readme\_zh.md
-2.  Gitee blog [blog.gitee.com](https://blog.gitee.com)
-3.  Explore open source project [https://gitee.com/explore](https://gitee.com/explore)
-4.  The most valuable open source project [GVP](https://gitee.com/gvp)
-5.  The manual of Gitee [https://gitee.com/help](https://gitee.com/help)
-6.  The most popular members  [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+Key Features:
+- Blocking movement (waits until position reached)
+- Position monitoring
+- Safety stop function
+- Direct hardware communication via Modbus
