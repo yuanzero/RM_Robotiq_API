@@ -1,4 +1,4 @@
-Robotic Arm Gripper Controller
+Realman Robotic Arm and Robotiq Gripper Controller
 -----------------------------
 
 1. Initialization:
